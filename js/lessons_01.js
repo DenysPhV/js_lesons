@@ -1,7 +1,4 @@
-// let a = 5;
-// console.log(a);
-// a = Number(a);
-// console.log(typeof a);
+
 
 
 
