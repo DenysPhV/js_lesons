@@ -10,3 +10,7 @@
 Вызов getExtremeElements(["apple", "peach", "pear", "banana"]) возвращает ["apple", "banana"]
 */
 // answer
+array = [array[0], array[array.length - 1]];
+return array;
+
+// я не нашол решение, и как даже его искать темболее такое не имею не малейшего представления
