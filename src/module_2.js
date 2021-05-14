@@ -6,3 +6,34 @@ available - доступное количество товаров на скла
 ordered - количество единиц товара в заказе
 Проведи рефакторинг кода функции checkStorage используя паттерн «ранний возврат».
 */
+// ================================================================
+function checkStorage(available, ordered) {
+  // Change code below this line
+  let message;
+
+  if (ordered === 0) {
+    message = 'Your order is empty!';
+  } else if (ordered > available) {
+    message = 'Your order is too large, not enough goods in stock!';
+  } else {
+    message = 'The order is accepted, our manager will contact you';
+  }
+
+  return message;
+  // Change code above this line
+}
+// ================================================================
+// Ответ
+function checkStorage(available, ordered) {
+  // Change code below this line
+  
+    if (ordered === 0) {
+        return 'Your order is empty!';
+    }
+
+    if (ordered > available) {
+    return 'Your order is too large, not enough goods in stock!';
+    } 
+
+  return 'The order is accepted, our manager will contact you';
+  // Change code above this line
