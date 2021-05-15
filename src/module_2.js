@@ -17,6 +17,9 @@
 Вызов splitMessage("Mango", "") возвращает ["M", "a", "n", "g", "o"]
 Вызов splitMessage("best_for_week", "_") возвращает ["best", "for", "week"]
 */
+
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
 // answer
 function splitMessage(message, delimeter) {
   let words;
