@@ -15,3 +15,12 @@
 Вызов calculateEngravingPrice("Web-development is creative work", 20) возвращает 80
 */
 // answer
+// const message = "JavaScript is in my blood";
+// const pricePerWord = 10;
+function calculateEngravingPrice(message, pricePerWord) {
+  // Change code below this line
+  const result = message.split(' ').length;
+
+  return result * pricePerWord;
+  // Change code above this line
+}
