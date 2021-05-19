@@ -1,7 +1,14 @@
-//const message ="JavaScript is in my blood";
+const string = 'The quick brown fox jumped over the lazy dog';
+console.log(string);
 
-//const pricePerWord = 10;
-//const result = message.split(" ").length;
+const arr = string.split(' ');
+console.table(arr);
 
+let longesWorld = arrString[0];
 
-//console.log(result * pricePerWord);
+for (let i = 0; i < arrString.length; i += 1) {
+  if (longesWorld.length < arrString[i].length) {
+    longesWorld = arrString[i];
+  }
+}
+return longesWorld;
