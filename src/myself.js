@@ -8,8 +8,8 @@
 
 function getCommonElements(array1, array2) {
     
-    return array1;
+    return array1, array2;
 }
 
 
- const getCommonElements = ([1, 2, 3], [10, 20, 30])
+getCommonElements = ([1, 2, 3], [10, 20, 30])
