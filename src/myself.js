@@ -6,11 +6,10 @@
 
 //console.log(result * pricePerWord);
 
+function getCommonElements(array1, array2) {
+    
+    return array1;
+}
 
 
-
-
-const array1 = [1, 2, 3];
-const array2 = [10, 20, 30];
-
-
+ const getCommonElements = ([1, 2, 3], [10, 20, 30])
