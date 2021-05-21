@@ -3,6 +3,8 @@ const hotel = {
   stars: 5,
   capacity: 100,
 };
+
+//доступ к свойствам
 //          object.key
 console.log(hotel.name); // Resort Hotel
 //          object.key
