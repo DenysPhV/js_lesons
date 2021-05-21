@@ -28,3 +28,12 @@ function includes(array, value) {
   return false;
   // Change code above this line
 }
+//  Еще пример как это можно сделать
+// function include(arr, obj) {
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] == obj) return true;
+//   }
+// }
+
+// console.log(include([1, 2, 3, 4], 3)); // true
+// console.log(include([1, 2, 3, 4], 6)); // undefined
