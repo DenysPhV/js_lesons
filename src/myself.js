@@ -1,15 +1,17 @@
-//const message ="JavaScript is in my blood";
+const hotel = {
+  name: 'Resort Hotel',
+  stars: 5,
+  capacity: 100,
+};
+//          object.key
+console.log(hotel.name); // Resort Hotel
+//          object.key
+console.log(hotel['name']); // Resort Hotel
 
-//const pricePerWord = 10;
-//const result = message.split(" ").length;
+hotel.name = 'Coastline Resort';
+console.log(hotel.name); // Coastline Resort
+console.log(hotel['name']); // Coastline Resort
 
-
-//console.log(result * pricePerWord);
-
-function getCommonElements(array1, array2) {
-    
-    return array1;
-}
-
-
-getCommonElements = ([1, 2, 3], [10, 20, 30])
+hotel['name'] = 'Stardust Hotel';
+console.log(hotel.name); // Stardust Hotel
+console.log(hotel['name']); // Stardust Hotel
