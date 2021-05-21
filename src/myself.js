@@ -1,3 +1,4 @@
+// объявление объекта { ключ:значение}
 const hotel = {
   name: 'Resort Hotel',
   stars: 5,
