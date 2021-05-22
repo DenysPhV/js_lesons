@@ -9,6 +9,6 @@ hotel.greet = function () {
 };
 
 hotel.greet(); // Welcome!
-Hotel
+
 
 
