@@ -1,20 +1,17 @@
 // объявление объекта { ключ:значения }
-const hotel = {
-  name: 'Resort Hotel',
-  stars: 5,
-  capacity: 100,
+const book = {
+  title: 'Последнее королевство',
+  author: 'Бернард Корнуэлл',
+  genres: ['историческая проза', 'приключения'],
+  public: true,
+  rating: 8.38,
 };
 
-//доступ к свойствам
-//          object.key
-console.log(hotel.name); // Resort Hotel
-//          object.key
-console.log(hotel['name']); // Resort Hotel
+book.pageCount = 836;
+book.originalLanguage = 'en';
+book.translations = ['ua', 'ru'];
 
-hotel.name = 'Coastline Resort';
-console.log(hotel.name); // Coastline Resort
-console.log(hotel['name']); // Coastline Resort
-
-hotel['name'] = 'Stardust Hotel';
-console.log(hotel.name); // Stardust Hotel
-console.log(hotel['name']); // Stardust Hotel
+console.log(book);
+console.log(book.pageCount); // 836
+console.log(book.originalLanguage); // "en"
+console.log(book.translations); // ["ua", "ru"]
