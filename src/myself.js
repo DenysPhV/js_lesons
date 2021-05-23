@@ -1,14 +1,12 @@
-const hotel = {
-  name: 'Resort Hotel',
-  stars: 5,
-  capacity: 100,
+const key = 'person';
+const getKey = function () {
+  return 'age';
 };
 
-hotel.greet = function () {
-  console.log('Welcome!');
+// Computed properties
+const object = {
+  [key]: 'Mango',
+  [getKey()]: 2,
 };
 
-hotel.greet(); // Welcome!
-
-
-
+console.log(object); // {person: 'Mango', age: 2}
