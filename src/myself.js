@@ -1,14 +1,4 @@
-const hotel = {
-  name: 'Resort Hotel',
-  stars: 5,
-  capacity: 100,
+const playlist = {
+  //ключ всегда строка
+  name: [1, 2, 3],
 };
-
-hotel.greet = function () {
-  console.log('Welcome!');
-};
-
-hotel.greet(); // Welcome!
-
-
-
