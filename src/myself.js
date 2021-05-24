@@ -1,14 +1,12 @@
-const hotel = {
-  name: 'Resort Hotel',
-  stars: 5,
-  capacity: 100,
+// метод объекта
+const feedback = {
+  good: 5,
+  neutral: 10,
+  bad: 3,
 };
 
-hotel.greet = function () {
-  console.log('Welcome!');
-};
+const keys = Object.keys(feedback);
 
-hotel.greet(); // Welcome!
+console.log(keys);
 
-
-
+let totalFeedback = 0;
