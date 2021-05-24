@@ -1,20 +1,6 @@
-const hotel = {
-  name: 'Resort Hotel',
-  stars: 5,
-  capacity: 100,
-  showName() {
-    console.log(this.name);
-  },
-  changeCapacity(value) {
-    this.capacity = value;
-  },
-};
+const houses = ['Arryn', 'Frey', 'Greyjoy', 'Stark', 'Lannister', 'Tyrell'];
+const copyOfHouses = [...houses];
 
-hotel.showName(); // Resort Hotel
-
-hotel.changeCapacity(200);
-console.log(hotel.capacity); // 200
-
-
-
-
+console.log(houses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
+console.log(copyOfHouses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
+console.log(houses === copyOfHouses); // false - разные ссылки
