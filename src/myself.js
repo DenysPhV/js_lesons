@@ -2,13 +2,19 @@ const hotel = {
   name: 'Resort Hotel',
   stars: 5,
   capacity: 100,
+  showName() {
+    console.log(this.name);
+  },
+  changeCapacity(value) {
+    this.capacity = value;
+  },
 };
 
-hotel.greet = function () {
-  console.log('Welcome!');
-};
+hotel.showName(); // Resort Hotel
 
-hotel.greet(); // Welcome!
+hotel.changeCapacity(200);
+console.log(hotel.capacity); // 200
+
 
 
 
