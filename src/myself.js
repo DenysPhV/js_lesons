@@ -1,6 +1,11 @@
-const houses = ['Arryn', 'Frey', 'Greyjoy', 'Stark', 'Lannister', 'Tyrell'];
-const copyOfHouses = [...houses];
+const apartment = {
+  descr: 'Spacious apartment in the city centre',
+  rating: 4,
+  price: 2153,
+};
 
-console.log(houses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(copyOfHouses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(houses === copyOfHouses); // false - разные ссылки
+const values = [];
+
+const keys = Object.keys(apartment);
+
+console.log(keys);
