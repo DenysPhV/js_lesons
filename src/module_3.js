@@ -29,3 +29,15 @@ function calculateTotalPrice(productName) {
   }
   return result;
 }
+
+// еще вариант который работает без array
+// function calculateTotalPrice(productName) {
+//   let total = 0;
+//   for (const prop of products) {
+//     let name = prop.name;
+//     if (productName === name) {
+//       total = prop.price * prop.quantity;
+//     }
+//   }
+//   return total;
+// }
