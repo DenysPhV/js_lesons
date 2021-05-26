@@ -1,6 +1,18 @@
-const houses = ['Arryn', 'Frey', 'Greyjoy', 'Stark', 'Lannister', 'Tyrell'];
-const copyOfHouses = [...houses];
+const products = [
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
+];
 
-console.log(houses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(copyOfHouses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(houses === copyOfHouses); // false - разные ссылки
+function calculateTotalPrice(productName) {
+  let result = 0;
+  for (array of products) {
+    if (array.name === productName) {
+      result = array.price * array.quantity;
+    }
+  }
+  return result;
+}
+
+calculateTotalPrice(products);

@@ -21,10 +21,11 @@ const products = [
 ];
 
 function calculateTotalPrice(productName) {
-  const total = 0;
-
-  for (const product of products) {
+  let result = 0;
+  for (array of products) {
+    if (array.name === productName) {
+      result = array.price * array.quantity;
+    }
   }
-
-  return total;
+  return result;
 }
