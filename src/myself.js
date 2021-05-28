@@ -1,15 +1,11 @@
-<<<<<<< Updated upstream
-const houses = ['Arryn', 'Frey', 'Greyjoy', 'Stark', 'Lannister', 'Tyrell'];
-const copyOfHouses = [...houses];
+const first = { propA: 5, propB: 10, propC: 50 };
+const second = { propC: 15 };
 
-console.log(houses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(copyOfHouses); // ['Arryn','Frey','Greyjoy','Stark','Lannister','Tyrell']
-console.log(houses === copyOfHouses); // false - разные ссылки
-=======
-const rgb = [200, 255, 100];
+const third = { propB: 20, ...first, ...second };
+console.log(third); // { propA: 5, propB: 10, propC: 15 }
 
-const [red, ...colors] = rgb;
+const fourth = { ...first, ...second, propB: 20 };
+console.log(fourth); // { propA: 5, propB: 20, propC: 15 }
 
-console.log(`Red: ${red}, Colors: ${colors}`);
-// Red: 200, Colors: [255, 100]
->>>>>>> Stashed changes
+const fifth = { ...first, propB: 20, ...second };
+console.log(fifth); // { propA: 5, propB: 20, propC: 15 }
