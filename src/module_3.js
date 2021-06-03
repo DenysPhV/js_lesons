@@ -18,3 +18,10 @@ function countProps(object) {
   // Change code adove this line
   return propCount;
 }
+
+//интересные задачки
+
+let arr = [];
+arr[1] = '1';
+arr[6] = 111
+console.log(arr.length);
