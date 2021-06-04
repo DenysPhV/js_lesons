@@ -1,5 +1,26 @@
-const a = [1, 2];
-const b = [0, 30];
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     console.log('increment -> this', this);
+//     this.value += value;
+//   },
+//   decrement(value) {
+//     console.log('decrement -> this', this);
+//     this.value -= value;
+//   },
+// };
 
-const c = [20, ...a, ...b, 30, 50];
-console.log(c);
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCounter(10, counter.increment);
+// updateCounter(5, counter.decrement);
+
+const fn = function () {
+  return 5;
+};
+// Вызов функции
+console.log(fn());
+// обращение к функции
+console.log(fn);
