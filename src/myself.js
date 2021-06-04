@@ -9,7 +9,7 @@ const counter = {
     this.value -= value;
   },
 };
-
+// ====как работает bind
 const updateCounter = function (value, operation) {
   operation(value);
 };
@@ -19,7 +19,7 @@ updateCounter(10, counter.increment.bind(counter));
 // updateCounter(5, counter.decrement); был без бинда
 updateCounter(5, counter.decrement.bind(counter));
 
-console.log(counter);
+// console.log(counter);
 // =======================================================
 // const fn = function () {
 //   return 5;
@@ -28,3 +28,4 @@ console.log(counter);
 // console.log(fn());
 // // обращение к функции
 // console.log(fn);
+// =========================================================
