@@ -65,6 +65,7 @@ class User {
 
 class Admin extends User {
   // Пиши код ниже этой строки
+  accessLevel;
 
   static AccessLevel = {
     BASIC: 'basic',
