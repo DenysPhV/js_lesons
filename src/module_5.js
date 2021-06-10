@@ -37,3 +37,16 @@ const mango = new User({ name: 'Манго', email: 'mango@mail.com' });
 В результате вызова new Car({ brand: 'Nissan', model: 'Murano', price: 31700 }) получится объект { brand: 'Nissan', model: 'Murano', price: 31700 }.
 */
 // answer
+//function Car({ brand, model, price }) {
+//this.brand = brand;
+//this.model = model;
+//this.price = price;
+//}
+
+class Car {
+  constructor({ brand, model, price }) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+}
