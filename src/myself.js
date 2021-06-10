@@ -86,13 +86,13 @@
 // ===================================================
 
 // ======   Отложенный вызов регистрация событий =====
-const buttonRef = document.querySelector('.js-button');
+// const buttonRef = document.querySelector('.js-button');
 
-const handleBtnClick = function () {
-  console.log('Клик по кнопке' + Date.now());
-};
+// const handleBtnClick = function () {
+//   console.log('Клик по кнопке' + Date.now());
+// };
 
-buttonRef.addEventListener('click', handleBtnClick);
+// buttonRef.addEventListener('click', handleBtnClick);
 
 // мщжно записать коротко инлайн, убрав переменную.
 
