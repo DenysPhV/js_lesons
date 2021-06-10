@@ -86,13 +86,13 @@
 // ===================================================
 
 // ======   Отложенный вызов регистрация событий =====
-const buttonRef = document.querySelector('.js-button');
+// const buttonRef = document.querySelector('.js-button');
 
-const handleBtnClick = function () {
-  console.log('Клик по кнопке' + Date.now());
-};
+// const handleBtnClick = function () {
+//   console.log('Клик по кнопке' + Date.now());
+// };
 
-buttonRef.addEventListener('click', handleBtnClick);
+// buttonRef.addEventListener('click', handleBtnClick);
 
 // мщжно записать коротко инлайн, убрав переменную.
 
@@ -101,3 +101,37 @@ buttonRef.addEventListener('click', handleBtnClick);
 // buttonRef.addEventListener('click', function () {
 //   console.log('Клик по кнопке' + Date.now());
 // });
+
+// НАСЛЕДОВАНИЕ
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  move() {
+    console.log(`I, ${this.name}, am moving!`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    // Вызвать конструктор Animal с аргументом name
+    super(name);
+    this.breed = breed;
+  }
+
+  bark() {
+    console.log('woof!');
+  }
+
+  moveAndMakeSound() {
+    super.move();
+    this.bark();
+  }
+}
+
+const dog = new Dog('Mango', 'shepherd');
+
+dog.move(); // I, Mango, am moving!
+dog.bark(); // woof!
+dog.moveAndMakeSound(); // I, Mango, am moving! woof!
