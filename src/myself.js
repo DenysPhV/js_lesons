@@ -86,13 +86,13 @@
 // ===================================================
 
 // ======   Отложенный вызов регистрация событий =====
-const buttonRef = document.querySelector('.js-button');
+// const buttonRef = document.querySelector('.js-button');
 
-const handleBtnClick = function () {
-  console.log('Клик по кнопке' + Date.now());
-};
+// const handleBtnClick = function () {
+//   console.log('Клик по кнопке' + Date.now());
+// };
 
-buttonRef.addEventListener('click', handleBtnClick);
+// buttonRef.addEventListener('click', handleBtnClick);
 
 // мщжно записать коротко инлайн, убрав переменную.
 
@@ -101,3 +101,34 @@ buttonRef.addEventListener('click', handleBtnClick);
 // buttonRef.addEventListener('click', function () {
 //   console.log('Клик по кнопке' + Date.now());
 // });
+class Animal {
+  constructor(name) {
+    this.speed = 0;
+    this.name = name;
+  }
+  run(speed) {
+    this.speed = speed;
+    alert(`${this.name} бежит со скоростью ${this.speed}.`);
+  }
+  stop() {
+    this.speed = 0;
+    alert(`${this.name} стоит.`);
+  }
+}
+
+let animal = new Animal('Мой питомец');
+
+class Rabbit extends Animal {
+  hide() {
+    alert(`${this.name} прячется!`);
+  }
+
+  stop() {
+    super.stop(); // вызываем родительский метод stop
+    this.hide(); // и затем hide
+  }
+}
+
+let rabbit = new Rabbit('Мой кролик');
+rabbit.run(5); // Белый кролик бежит со скоростью 5.
+rabbit.hide(); // Белый кролик прячется!
