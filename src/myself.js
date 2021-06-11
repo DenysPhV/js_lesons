@@ -101,6 +101,8 @@
 // buttonRef.addEventListener('click', function () {
 //   console.log('Клик по кнопке' + Date.now());
 // });
+
+// Наследование и запуск кролика
 class Animal {
   constructor(name) {
     this.speed = 0;
