@@ -134,3 +134,59 @@
 // let rabbit = new Rabbit('Мой кролик');
 // rabbit.run(5); // Белый кролик бежит со скоростью 5.
 // rabbit.hide(); // Белый кролик прячется!
+
+// Императивный подход
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] > 3) {
+//     filteredNumbers.push(numbers[i]);
+//   }
+// }
+
+// console.log(filteredNumbers); // [4, 5]
+
+// Декларативный подход
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = numbers.filter(value => {
+//   return value > 3;
+// });
+
+// console.log(filteredNumbers); // [4, 5]
+
+/**
+ * Напишем реализацию чистой функции умножения элементов массива, возвращающей новый массив, не мутируя исходный.
+//  */
+// const pureMultiply = (array, value) => {
+//   const result = [];
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     result.push(array[i] * value);
+//   }
+
+//   return result;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// // Не произошло мутации исходных данных
+// console.log(numbers); // [1, 2, 3, 4, 5]
+
+// // Функция вернула новый массив с измененными данными
+// console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+//  Код более декларативный
+const numbers = [1, 2, 3];
+
+// Классический for
+for (let i = 0; i < numbers.length; i += 1) {
+  console.log(numbers[i]);
+}
+
+// Функциональный forEach
+numbers.forEach(num => console.log(num));
+
+// Указываем параметр idx если нужен доступ к счетчику
+numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
