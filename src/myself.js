@@ -178,15 +178,68 @@
 // console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
 //  Код более декларативный
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
-// Классический for
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(numbers[i]);
+// // Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+// }
+
+// // Функциональный forEach
+// numbers.forEach(num => console.log(num));
+
+// // Указываем параметр idx если нужен доступ к счетчику
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+
+// const impureAssoc = (key, value, object) => {
+//   object[key] = value;
+// };
+// const person = {
+//   name: 'Bobo',
+// };
+// const result = impureAssoc('shoeSize', 400, person);
+// console.log({
+//   person,
+//   result,
+// });
+
+// “Очищаем это”
+// const pureAssoc = (key, value, object) => ({
+//   ...object,
+//   [key]: value,
+// });
+// const person = {
+//   name: 'Bobo',
+// };
+// const result = pureAssoc('shoeSize', 400, person);
+// console.log({
+//   person,
+//   result,
+// });
+
+// можно и так
+// const pureAssoc = (key, value, object) => {
+//   const newObject = { ...object };
+//   newObject[key] = value;
+//   return newObject;
+// };
+// const person = {
+//   name: 'Bobo',
+// };
+// const result = pureAssoc('shoeSize', 400, person);
+// console.log({
+//   person,
+//   result,
+// });
+
+function changeEven(numbers, value) {
+  // Пиши код ниже этой строки
+  const result = [];
+
+  numbers.forEach(number => result.push(number % 2 === 0 ? (number += value) : number));
+
+  return result;
+  // Пиши код выше этой строки
 }
 
-// Функциональный forEach
-numbers.forEach(num => console.log(num));
-
-// Указываем параметр idx если нужен доступ к счетчику
-numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+changeEven([1, 2, 3, 4, 5], 10);
