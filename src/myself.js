@@ -178,15 +178,36 @@
 // console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
 //  Код более декларативный
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
 // Классический for
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(numbers[i]);
-}
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+// }
 
 // Функциональный forEach
-numbers.forEach(num => console.log(num));
+// numbers.forEach(num => console.log(num));
 
 // Указываем параметр idx если нужен доступ к счетчику
-numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+
+const books = [
+  {
+    title: 'Последнее королевство',
+    author: 'Бернард Корнуэлл',
+    genres: ['приключения', 'историческое'],
+  },
+  {
+    title: 'На берегу спокойных вод',
+    author: 'Роберт Шекли',
+    genres: ['фантастика', 'мистика'],
+  },
+  {
+    title: 'Красна как кровь',
+    author: 'Ли Танит',
+    genres: ['ужасы', 'мистика', 'приключения'],
+  },
+];
+// Пиши код ниже этой строки
+const allGenres = books.flatMap(book => book.genres);
+const uniqueGenres = allGenres.filter((course, index, array) => array.indexOf(course) === index);
