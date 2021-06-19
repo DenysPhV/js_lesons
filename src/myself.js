@@ -178,15 +178,22 @@
 // console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
 //  Код более декларативный
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
 // Классический for
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(numbers[i]);
-}
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+// }
 
 // Функциональный forEach
-numbers.forEach(num => console.log(num));
+// numbers.forEach(num => console.log(num));
 
 // Указываем параметр idx если нужен доступ к счетчику
-numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+
+const getTotalBalanceByGender = (users, gender) => {
+  return users
+    .filter(user => user.gender === gender)
+    .map(user => user.balance)
+    .reduce((previousValue, value) => (previousValue += value), 0);
+};
