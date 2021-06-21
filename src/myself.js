@@ -178,15 +178,31 @@
 // console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
 //  Код более декларативный
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
 // Классический for
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(numbers[i]);
-}
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+// }
 
 // Функциональный forEach
-numbers.forEach(num => console.log(num));
+// numbers.forEach(num => console.log(num));
 
 // Указываем параметр idx если нужен доступ к счетчику
-numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+
+const min = 0;
+const max = 10;
+let total = 0;
+
+// фор от min до max с шагом в 1
+for (let i = min; i <= max; i += 1) {
+  // проверяем остаток от деления
+  if (i % 2 !== 0) {
+    console.log('Не четное:', i);
+    continue;
+  }
+
+  console.log('четное:', i);
+  total += 1;
+}
