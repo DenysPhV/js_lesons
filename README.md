@@ -8,18 +8,20 @@
 обзоре, к map/reduce/filter, но он настолько компактный, что трудно было не поместить его в список.
 Кроме того, мы будем использовать похожий код в нескольких примерах.
 
-let values = [3, 1, 3, 5, 2, 4, 4, 4]; let uniqueValues = [...new Set(values)];
+    let values = [3, 1, 3, 5, 2, 4, 4, 4]; let uniqueValues = [...new Set(values)];
 
-// uniqueValues is [3, 1, 5, 2, 4]
+    // uniqueValues is [3, 1, 5, 2, 4]
 
 <!-- ====================================================================================== -->
 
 #2. Простой поиск (чувствительный к регистру) Метод filter() создает новый массив со всеми
 элементами, которые проходят условие, реализованного предоставленной функцией.
 
-let users = [ { id: 11, name: 'Adam', age: 23, group: 'editor' }, { id: 47, name: 'John', age: 28,
-group: 'admin' }, { id: 85, name: 'William', age: 34, group: 'editor' }, { id: 97, name: 'Oliver',
-age: 28, group: 'admin' } ];
+    let users = [ 
+    { id: 11, name: 'Adam', age: 23, group: 'editor' },
+    { id: 47, name: 'John', age: 28, group: 'admin' }, 
+    { id: 85, name: 'William', age: 34, group: 'editor' }, 
+    { id: 97, name: 'Oliver',age: 28, group: 'admin' } ];
 
     let res = users.filter(it => it.name.includes('oli'));
      //res is []
@@ -28,8 +30,8 @@ age: 28, group: 'admin' } ];
 
 #3. Простой поиск (не чувствительный к регистру)
 
-let res = users.filter(it => new RegExp('oli', "i").test(it.name)); //res is [ { id: 97, name:
-'Oliver', age: 28, group: 'admin' } ]
+    let res = users.filter(it => new RegExp('oli', "i").test(it.name)); 
+    //res is [ { id: 97, name: 'Oliver', age: 28, group: 'admin' } ]
 
 <!-- ====================================================================================== -->
 
