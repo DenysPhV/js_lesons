@@ -191,18 +191,20 @@
 // Указываем параметр idx если нужен доступ к счетчику
 // numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
 
-const min = 0;
-const max = 10;
-let total = 0;
+// =============================================================================
+/* Напиши скрипт поиска логина
+-Если логина нет, вывести сщщбщение "Пользователь [логин] не найден"
+-Если нашли логин, выввести сщщбщение "Пользователь [логин] найден"
 
-// фор от min до max с шагом в 1
-for (let i = min; i <= max; i += 1) {
-  // проверяем остаток от деления
-  if (i % 2 !== 0) {
-    console.log('Не четное:', i);
-    continue;
-  }
+- Сначала через for
+- Потом через for of
+- логика break
+- Метод includes() с тернарным оператором
+*/
 
-  console.log('четное:', i);
-  total += 1;
+const logins = ['gdtrujdfhh', ';lkgorkrkr', 'nchsydgw46', 'bnlrpekk'];
+const loginToFind = ';lkgorkrkr';
+
+for (let i = 0; i < logins.length; i += 1) {
+  const login = logins[i];
 }
