@@ -202,9 +202,36 @@
 - Метод includes() с тернарным оператором
 */
 
-const logins = ['gdtrujdfhh', ';lkgorkrkr', 'nchsydgw46', 'bnlrpekk'];
-const loginToFind = ';lkgorkrkr';
+// const logins = ['gdtrujdfhh', ';lkgorkrkr', 'nchsydgw46', 'bnlrpekk'];
+// const loginToFind = ';lkgorkrkr';
 
-for (let i = 0; i < logins.length; i += 1) {
-  const login = logins[i];
-}
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+// }
+
+// const changeWords = str => {
+//   let word = '';
+//   const separate = str.split(' ');
+
+//   for (let i = 0; i <= separate.length - 1; i += 1) {
+//     // console.log(arrWord[i].length >= 5);
+//     if (word) word += ' ';
+//     if (separate[i].length >= 5) {
+//       word += separate[i].split('').reverse().join('');
+//     } else {
+//       word += separate[i];
+//     }
+//   }
+//   // console.log(word);
+//   return word;
+// };
+
+const changeWords = str =>
+  str
+    .split(/\s+/)
+    .map(word => (word.length >= 5 ? word.split('').reverse().join('') : word))
+    .join(' ');
+
+changeWords('Hey fellow interns'); //=> returns Hey wollef snretni
+changeWords('This is a test'); //This is a test
+changeWords('This is another test'); //This is rehtona test
