@@ -226,12 +226,34 @@
 //   return word;
 // };
 
-const changeWords = str =>
-  str
-    .split(/\s+/)
-    .map(word => (word.length >= 5 ? word.split('').reverse().join('') : word))
-    .join(' ');
+// const changeWords = str =>
+//   str
+//     .split(/\s+/)
+//     .map(word => (word.length >= 5 ? word.split('').reverse().join('') : word))
+//     .join(' ');
 
-changeWords('Hey fellow interns'); //=> returns Hey wollef snretni
-changeWords('This is a test'); //This is a test
-changeWords('This is another test'); //This is rehtona test
+// changeWords('Hey fellow interns'); //=> returns Hey wollef snretni
+// changeWords('This is a test'); //This is a test
+// changeWords('This is another test'); //This is rehtona test
+
+function calculateDiscount(years, paymentMethod, returnedOrder) {
+  let discount = 0;
+  if (years >= 1) {
+    if (returnedOrder) {
+      discount = 0;
+      return discount;
+    }
+    if (paymentMethod === 'MasterCard') {
+      discount = 0.1;
+    }
+    if (getCustomerBirthdayDate() === getCurrentDate()) {
+      discount = 0.5;
+    }
+  }
+  return discount;
+}
+//years - кількість років, з тих пір, як користувач зробив першу покупку
+//paymentMethod - зберігає значення типу оплати
+//returnedOrder - зберігає в собі інформацію про те, чи був товар повернутий раніше тим самим покупцем
+//getCustomerBirthdayDate - внутрішня функція. Повертає дату народження кастомера
+//getCurrentDate - внутрішня функція. Повертає поточну дату
