@@ -236,22 +236,22 @@
 // changeWords('This is a test'); //This is a test
 // changeWords('This is another test'); //This is rehtona test
 
-function calculateDiscount(years, paymentMethod, returnedOrder) {
-  let discount = 0;
-  if (years >= 1) {
-    if (returnedOrder) {
-      discount = 0;
-      return discount;
-    }
-    if (paymentMethod === 'MasterCard') {
-      discount = 0.1;
-    }
-    if (getCustomerBirthdayDate() === getCurrentDate()) {
-      discount = 0.5;
-    }
-  }
-  return discount;
-}
+// function calculateDiscount(years, paymentMethod, returnedOrder) {
+//   let discount = 0;
+//   if (years >= 1) {
+//     if (returnedOrder) {
+//       discount = 0;
+//       return discount;
+//     }
+//     if (paymentMethod === 'MasterCard') {
+//       discount = 0.1;
+//     }
+//     if (getCustomerBirthdayDate() === getCurrentDate()) {
+//       discount = 0.5;
+//     }
+//   }
+//   return discount;
+// }
 //years - кількість років, з тих пір, як користувач зробив першу покупку
 //paymentMethod - зберігає значення типу оплати
 //returnedOrder - зберігає в собі інформацію про те, чи був товар повернутий раніше тим самим покупцем
